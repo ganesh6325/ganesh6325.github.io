@@ -1,0 +1,32 @@
+
+
+
+
+Question No.2) Write program to give difference in days from two given input date (without using any inbuilt function).
+
+Answer-
+
+	DateTime d = DateTime.Now;
+	DateTime c = DateTime.Now;
+	c = d.AddDays(145);
+	string cc;
+	Console.WriteLine(d);
+	Console.WriteLine(c);
+	var t = (c - d).Days;
+	Console.WriteLine(t);
+	cc = Console.ReadLine();
+
+
+Question No.3) Suppose you have 3 tables as below
+		1. Order table (OrderId(PK), OrderDate, OrderNumber, CustomerID, TotalAmount)
+		2. OrderItem(OrdItemId(PK), OrderId, ProductId, UnitPrice, Quantity)
+		3. Product(ProductId(PK), ProductName, SupplierId, UnitPrice, Package)
+		Write a query to List all orders with product names, quantities, and prices.
+
+Answer-
+
+
+	SELECT  Product Name, Quantitiy, and UnitPrice
+	FROM Product
+     	Right JOIN OrderItem
+     	ON OrderItem.ProductID = Product.ProductID
